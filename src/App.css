@@ -1,0 +1,580 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-shadow: 1px 1px 8px #fff, 0 0 1em #fff, 0 0 0.2em #fff;
+  font-weight: 800;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+  background-color: #7C83FD;
+}
+
+/* INDEX */
+.index-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgba(162, 174, 255, 1) 0%, rgba(178, 188, 242, 1) 50%, rgba(160, 181, 255, 1) 100%);
+}
+
+.index-title {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.index-title button {
+  width: 50%;
+}
+
+.index-img {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.index-img img {
+  width: 100%;
+
+}
+
+/* INDEX */
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.container {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0;
+  animation: weather-frame 1.5s forwards;
+}
+
+
+@keyframes weather-frame {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* PRONOSTICO */
+
+/* DAY */
+
+.current-weather {
+  height: 60vh;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-data {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: transparent;
+  gap: 50px;
+}
+
+.main-data-icon .bi {
+  font-size: 10vw;
+}
+
+.main-data-temp {
+  display: flex;
+}
+
+.main-data-temp:nth-child(1) {
+  display: flex;
+  font-size: 60px;
+}
+
+.main-data-temp:nth-child(2) {
+  display: flex;
+  font-size: 30px;
+  padding-top: 10px;
+}
+
+.detail-data {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
+}
+
+.detail-description {
+  display: flex;
+  flex-direction: column;
+}
+
+/* DAY */
+
+
+
+#pronostico {
+  width: 100%;
+  height: 60vh;
+  background-color: rgb(20, 104, 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+#forecast {
+  width: 70%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: 20%;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon .bi {
+  font-size: 6vw;
+}
+
+.temperatura {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.precipitacion {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.precipitacion .bi {
+  font-size: 2vw;
+}
+
+.description {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+
+}
+
+/* ::-webkit-scrollbar-button {
+  /* /* background: #4a41ef  
+} */
+::-webkit-scrollbar-track-piece {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a41ef;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .item {
+    width: 20%;
+    min-width: 100px;
+  }
+}
+
+.hours {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hours-container {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  border-radius: 10px;
+  height: 400px;
+  width: 80%;
+}
+
+.hours-container::-webkit-scrollbar {
+  height: 0px;
+}
+
+/* Track */
+/* .hours-container::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey; 
+  border-radius: 10px;
+} */
+
+/* Handle */
+/* .hours-container::-webkit-scrollbar-thumb {
+   /* background: rgb(7, 7, 7); 
+  border-radius: 10px;
+} */
+.hours-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  min-width: 210px;
+}
+
+.hours-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hours-icon .bi {
+  font-size: 6vw;
+}
+
+.hours-temperatura {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hours-precipitacion {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hours-precipitacion .bi {
+  font-size: 2vw;
+}
+
+.hours-description {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.arrow-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+  color: grey;
+  font-size: 30px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 1;
+}
+
+.arrow-component-story {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+  color: grey;
+  font-size: 30px;
+  position: absolute;
+  top: 45%;
+  z-index: 1;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.arrow-component-story-right {
+  right: 10px;
+  padding: 2px;
+}
+
+.arrow-component-story-left {
+  left: 10px;
+  padding: 2px;
+}
+
+.arrow-back-left {
+  top: 30px;
+  left: 30px;
+  padding: 5px;
+}
+
+.reload-weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+  color: grey;
+  font-size: 24px;
+  font-weight: 300;
+  position: absolute;
+  top: 30px;
+  z-index: 1;
+  right: 30px;
+  padding: 5px;
+}
+
+.city-name {
+  position: relative;
+}
+
+.selected-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.selected-form span.selected-title {
+  padding: 15px;
+  font-size: 30px;
+  margin: 30px 0;
+}
+
+.selected-form .selected-item {
+  width: 50%;
+}
+.item-info{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+
+/* LOADING */
+.loading-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lds-grid {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  z-index: 10;
+}
+
+.lds-grid div {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #FEFF86;
+  animation: lds-grid 1.2s linear infinite;
+}
+
+.lds-grid div:nth-child(1) {
+  top: 8px;
+  left: 8px;
+  animation-delay: 0s;
+}
+
+.lds-grid div:nth-child(2) {
+  top: 8px;
+  left: 32px;
+  animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(3) {
+  top: 8px;
+  left: 56px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(4) {
+  top: 32px;
+  left: 8px;
+  animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(5) {
+  top: 32px;
+  left: 32px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(6) {
+  top: 32px;
+  left: 56px;
+  animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(7) {
+  top: 56px;
+  left: 8px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(8) {
+  top: 56px;
+  left: 32px;
+  animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(9) {
+  top: 56px;
+  left: 56px;
+  animation-delay: -1.6s;
+}
+
+@keyframes lds-grid {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* LOADING */
+
+@media (max-width: 990px) {
+  .index-title h1 {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 750px) {
+  .index-title h1 {
+    font-size: 2em;
+  }
+  .hours-icon .bi, .main-data-icon .bi {
+    font-size: 10vw;
+  }
+  .icon .bi{
+    font-size: 10vw;
+  }
+}
+
+@media (max-width: 550px) {
+  .index-img {
+    display: none;
+  }
+
+  .index-title h1 {
+    font-size: 35px;
+  }
+
+  .selected-form .selected-item, .item-info {
+    width: 100%;
+  }
+  .hours-container {
+    width: 95%;
+  }
+  .main-data {
+    gap: 20px;
+  }
+  
+  .detail-data {
+    gap: 20px;
+  }
+  .icon .bi{
+    font-size: 14vw;
+  }
+  .hours-icon .bi, .main-data-icon .bi {
+    font-size: 14vw;
+  }
+}
+
